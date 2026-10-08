@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-brand-50: #eff6ff;
+    --color-brand-100: #dbeafe;
+    --color-brand-200: #bfdbfe;
+    --color-brand-300: #93c5fd;
+    --color-brand-400: #60a5fa;
+    --color-brand-500: #3b82f6;
+    --color-brand-600: #2563eb;
+    --color-brand-700: #1d4ed8;
+    --color-brand-800: #1e40af;
+    --color-brand-900: #1e3a8a;
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+    }
+
+    .btn-primary {
+        @apply bg-brand-600 text-white shadow-sm hover:bg-brand-700 focus:ring-brand-500;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50 focus:ring-brand-400;
+    }
+
+    .btn-danger {
+        @apply bg-white text-red-600 ring-1 ring-red-200 hover:bg-red-50 focus:ring-red-400;
+    }
+
+    .btn-sm {
+        @apply rounded-lg px-3 py-1.5 text-xs;
+    }
+
+    .btn-block {
+        @apply w-full;
+    }
+
+    .card {
+        @apply rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200;
+    }
+
+    .label {
+        @apply mb-1.5 block text-sm font-medium text-slate-700;
+    }
+
+    .input {
+        @apply block w-full rounded-xl bg-white px-3.5 py-2.5 text-sm text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-brand-600;
+    }
+
+    .chip {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ring-1;
+    }
+
+    .nav-link {
+        @apply flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition;
+    }
+}
